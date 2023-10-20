@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .test {
+            font-size: 70px;
+            text-align: center;
+            align-content: center;
+        }
+        #backButton {
+            display: block;
+            margin: 0 auto;
+            font-size: 30px;
+            text-align: center;
+            align-content: center;
+            padding: 10px;
+            background-color: white;
+            border-color: rgb(0, 0, 0);
+            border-radius: 15px;
+        }
+
+        #copyButton {
+            display: block;
+            margin: 0 auto;
+            font-size: 70px;
+            text-align: center;
+            align-content: center;
+            padding: 10px;
+            border-color: rgb(0, 0, 0);
+            border-radius: 15px;
+        }
+
+        .custom-button {
+        padding: 8.5px 4px 8.5px 4px;
+
+        background: #fff  no-repeat right 16px center;
+        background-size: 10px;
+        transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+        border: 2px solid #555555;
+        border-radius: 3px;
+        }
+        .custom-button:hover {
+        border: 4px solid #333333;
+        }
+        .custom-button:focus {
+        border: 1px solid #333333;
+        box-shadow: 0 5px 7px 0 rgba(0,0,0,.2);
+        outline: none;
+        }
+
+
+    body { 
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    background: radial-gradient(ellipse at center, #f5f5f5 0%,#ddd 100%);
+    }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Coupon Code</title>
+</head>
+<body>
+    <br>
+    <br>
+    
+    <div id="couponCodeHere" class="test">Test</div>
+
+    <br><br><br><br><br><br><br>
+
+    <button id="copyButton" class="custom-button">Copy Code</button>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+<a href="../../index.php">
+    <button id="backButton" class="custom-button"><center>Go Back</center></button>
+</a>
+
+    <script>
+        // Extract coupon code from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const couponCode = urlParams.get('code');
+        const couponCodeElement = document.getElementById("couponCodeHere");
+        couponCodeElement.textContent = "Your coupon code is " + couponCode;
+        const copyButton = document.getElementById("copyButton");
+        copyButton.addEventListener("click", function() {
+            const tempTextarea = document.createElement("textarea");
+            tempTextarea.value = couponCode;
+            document.body.appendChild(tempTextarea);
+            tempTextarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextarea);
+
+
+            alert("Coupon code copied to clipboard!");
+        });
+/*
+        document.getElementById("backButton").addEventListener("click", function() {
+        window.location.replace(document.referrer);
+    });
+*/
+    </script>
+</body>
+</html>

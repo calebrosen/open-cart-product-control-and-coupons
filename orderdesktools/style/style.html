@@ -1,0 +1,592 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<link rel="icon" type="image/x-icon" href="https://www.grillandpatio.com/image/IRG.png">
+
+<style>
+    /* body {background-color: #dbdada;} */
+
+     .main-title {
+        font-size: 43px;
+        font-weight: bolder;
+        align-content: center;
+        font-family: Verdana;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    .subtitle {
+        font-size: 32px;
+        font-weight: bolder;
+        align-content: center;
+        font-family: Verdana;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    .lowerAdmin1 {
+        font-size: 28px;
+        font-weight: bolder;
+        align-content: left;
+        font-family: Verdana;
+        text-align: left;
+        padding-top: 5px;
+        padding-left: 50px;
+    }
+
+    .selectAmount {
+
+        width: 359px;
+        height:50px;
+        margin-top:15px;
+    }
+
+
+    .hr-text {
+    line-height: 1em;
+
+    outline: 0;
+    border: 0;
+     color: black;
+     text-align: center;
+    height: 1.5em;
+     opacity: .5;
+    content: '';
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    width: 100%;
+    height: 1px;
+    margin-top: 47px;
+    
+    }
+  &:after {
+    content: attr(data-content);
+    margin-top: 47px;
+    color: black;
+
+    line-height: 1.5em;
+    color: #818078;
+    background-color: #fcfcfa;
+  }
+
+
+.lowerAdmin3 {
+    font-family: Verdana;
+    font-size:24px;
+}
+
+    .lowerAdmin2 {
+        font-size: 28px;
+        font-weight: bolder;
+
+        font-family: Verdana;
+
+    }
+
+    .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+
+.left-column,
+
+.right-column {
+    flex-basis: calc(33.33% - 20px);
+}
+
+
+.leftAlign1 {
+    align-items: right;
+    align-content: right;
+    text-align: right;
+}
+
+.middle-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
+.checkboxes {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    margin-left: 50px;
+}
+
+    .belowTable {
+        font-size: 29px;
+        font-weight: bold;
+        align-content: center;
+        font-family: Verdana;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    .belowTable1 {
+        font-size: 18px;
+        font-weight: bold;
+        align-content: center;
+        font-family: Verdana;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    .select-box {
+        font-size: 22px;
+        font-weight: 500;
+        align-content: center;
+        font-family: Verdana;
+        text-align: center;
+    }
+
+
+    div {
+        text-align: center;
+    }
+
+    .greentext {
+        color: #2fbd36;
+    }
+
+    .button-35 {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1.3rem 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: #121212 0 0 0 1px, transparent 0 0 0 0;
+}
+
+.button-35:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1.3rem 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.custom-input {
+
+
+padding: 8.5px 4px 8.5px 4px;
+background: #fff  no-repeat right 16px center;
+background-size: 10px;
+transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+border: 1px solid #a1a1a1;
+border-radius: 3px;
+}
+.custom-input:hover {
+border: 1px solid #696969;
+}
+.custom-input:focus {
+border: 1px solid #696969;
+box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+outline: none;
+}
+
+.productReleaseContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+.productReleaseBox {
+    width:75%; 
+    text-align:left;
+    margin:auto;
+    min-width: 30%;
+    max-width: 30%;
+    line-height: 100%;
+
+
+    .selectize-dropdown .option {
+    line-height: 1.2;  /* adjust this value as needed */
+    padding: 5px 10px; /* adjust padding as needed */
+    }
+
+    .selectize-input { 
+    font-size: 23px;
+    transform: scale(1.5);
+    min-width: 45%;
+    line-height: 100%;
+    max-width: 45%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+
+    .selectize-dropdown { 
+    text-align: left;
+    margin-top:1.6rem;
+    font-size: 23px; }
+
+    vertical-align: center;
+    height: 90px;
+    padding-top:55px;
+    display: inline-block;
+
+
+}
+
+
+.productRelease {
+    width:95%; 
+    text-align:left;
+    margin:auto;
+    min-width: 95%;
+    max-width: 95%;
+
+    .selectize-input { 
+    font-size: 23px;
+    transform: scale(1.5);
+    min-width: 65%;
+    max-width: 65%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+
+
+    .selectize-dropdown .option {
+    line-height: 1.08; /* Adjust this value as needed */
+    }
+
+    .selectize-dropdown-content {
+    padding:3px; 
+    }
+
+    .selectize-dropdown { 
+    text-align: left;
+    margin-top:1.5rem;
+    font-size: 24px; }
+
+    vertical-align: center;
+    height: 250px;
+    padding-top:10px;
+    display: inline-block;
+
+
+}
+
+.leftalignedText {
+    text-align: left;
+    .selectize-dropdown {
+        text-align: left !important;
+        align-content: left !important;
+    }
+}
+
+.centeredRow {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.scaled {
+    transform: scale(1.00);
+}
+
+.quantityBox {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    min-width: 30%;
+    max-width: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantityBox .selectize-input {
+    font-size: 23px;
+    transform: scale(1.5);
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center; /* Center text within input and dropdown */
+    display: inline-block; /* Ensure inline-block for centering */
+}
+
+.quantityBox .selectize-dropdown {
+    font-size: 28px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center; /* Center text within input and dropdown */
+    display: inline-block; /* Ensure inline-block for centering */
+}
+
+.custom-button {
+
+
+padding: 8.5px 6px 8.5px 6px;
+
+background: #fff  no-repeat right 16px center;
+background-size: 10px;
+transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+border: 1px solid #a1a1a1;
+border-radius: 3px;
+}
+.custom-button:hover {
+border: 1.7px solid #012f41;
+}
+.custom-button:focus {
+border: 1.7px solid #01acf0;
+box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+outline: none;
+}
+
+
+    .dimText {
+    color: #e02434;
+    font-weight:bold;
+    }
+
+    .fpgText {
+    color: #f8742c;
+    font-weight:bold;
+    }
+
+
+    .fmpfmsText {
+    color: #494a4a;
+    font-weight:bold;
+    }
+
+    .rfsText {
+    color: #f8742c;
+    font-weight:bold;
+    }
+
+    .gnpText {
+    color:#13cefd;
+    font-weight:bold;
+    }
+
+    .custom-select {
+    padding: 10px 4px 10px 4px;
+    background: #fff  no-repeat right 16px center;
+    background-size: 10px;
+    transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+    border: 1px solid #a1a1a1;
+    border-radius: 3px;
+    }
+
+    .custom-select:hover {
+    border: 1px solid #696969;
+    }
+
+    .custom-select:focus {
+    border: 1px solid #696969;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+    outline: none;
+    }
+
+    select::-ms-expand {
+    display:none;
+    }
+
+
+    .pwInput {
+
+    border:solid 1px green;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    padding: 8.5px 4px 8.5px 4px;
+    background: #fff  no-repeat right 16px center;
+    background-size: 10px;
+    transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+    border: 1px solid #a1a1a1;
+    border-radius: 3px;
+    }
+    
+.pwInput:hover {
+border: 1px solid #696969;
+}
+.pwInput:focus {
+border: 1px solid #696969;
+box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+outline: none;
+}
+
+.theButton {
+margin-top: -3px;
+border:solid 1px green;
+height: 20px;
+line-height: 20px;
+vertical-align: middle;
+padding: 20px 6px 40px 6px;
+ background: #fff  no-repeat right 16px center;
+background-size: 10px;
+transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+border: 1px solid #a1a1a1;
+border-radius: 3px;
+}
+.theButton:hover {
+border: 1px solid #696969;
+}
+.theButton:focus {
+border: 1px solid #696969;
+box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+outline: none;
+}
+
+
+body {
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.6rem;
+ 
+    background: radial-gradient(ellipse at center, #f5f5f5 0%,#ddd 100%);
+}
+h1 {
+  font-family: Merriweather, serif;
+}
+a {
+    color: #333;
+    font-weight: 700;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.custom-select {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.6rem;
+}
+
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered >
+ tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 1px solid rgb(139, 138, 138); 
+
+}
+
+table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 20px;
+        background-color: #ffffff;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+
+    thead {
+        background-color: #8b8b8b;
+        color: #ffffff;
+        border: 1px solid #a32c2c;
+    }
+    .gbutton {
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .gbutton:hover {
+        background-color: #45a049;
+    }
+
+
+    .rbutton {
+        padding: 5px 10px;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .rbutton:hover {
+        background-color: #e40e0e;
+    }
+
+
+
+    .tables {
+        border: 2px;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+  integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+  integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
